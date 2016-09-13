@@ -1,4 +1,4 @@
-## Commands to download and clean up household energy data
+## Commands to clean up household energy data
 
 > df <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", 
       colClasses = c("character", "character", rep("numeric", 7)), na = "?")
