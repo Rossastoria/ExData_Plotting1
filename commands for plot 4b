@@ -1,0 +1,24 @@
+## The following commands produce the four plots which compose the fourth plot of the assignment.
+
+
+    ## create a 2 by 2 plotting field
+> par(mfrow = c(2,2))   
+
+    ## plot time against active power
+> plot(dat$Time, dat$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
+
+    ## plot time against voltage
+> plot(dat$Time, dat$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
+
+    ## plot time against each of the 3 submeters and add a legend
+> plot(dat$Time, dat$Sub_metering_1, type = "l", col = "black", xlab = "", ylab = "Energy sub metering")
+> legend("topright", col = c("black", "red", "blue"), legend = c("Sub Meter 1", "Sub Meter 2", "Sub Meter 3"), lty = 1, bty = "n", cex = 0.5)
+> lines(dat$Time, dat$Sub_metering_2, col = "red")
+> lines(dat$Time, dat$Sub_metering_3, col ="blue")
+
+    ## plot time against reactive power
+> plot(dat$Time, dat$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_active_power")
+
+    ## save the screen device to a png
+> dev.copy(png, file = "Plot4b.png")
+> dev.off()
