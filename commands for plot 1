@@ -1,0 +1,4 @@
+## These commands construct a red histogram and copy it to a png titled "Plot1.png"
+
+> hist(dat$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+> dev.copy(png, file = "Plot1.png")
