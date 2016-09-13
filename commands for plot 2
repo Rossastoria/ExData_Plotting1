@@ -1,0 +1,7 @@
+## The following produce Plot 2
+
+> dev.off()
+> png("Plot2.png")
+> plot(dat$Time, dat$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)")
+> dev.off()
+
